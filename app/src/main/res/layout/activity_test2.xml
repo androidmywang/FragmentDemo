@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+    <fragment
+        android:id="@+id/aty_title"
+        android:name="com.myking.fragmentdemo.test1.TitleFragment"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+
+    <include
+        android:id="@+id/aty_bottom"
+        layout="@layout/aty_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"/>
+
+    <FrameLayout
+        android:id="@+id/aty_layout_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/aty_bottom"
+        android:layout_below="@id/aty_title"/>
+
+</RelativeLayout>
